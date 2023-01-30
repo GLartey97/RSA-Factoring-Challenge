@@ -1,6 +1,7 @@
-Task 0
+#!/usr/bin/python3
 
 import sys
+
 
 def factorize(n):
     factors = []
@@ -8,6 +9,7 @@ def factorize(n):
         if n % i == 0:
             factors.append((i, n//i))
     return factors
+
 
 def main(file_name):
     with open(file_name, 'r') as f:
@@ -19,6 +21,7 @@ def main(file_name):
                     print(f"{n}={factor[0]}*{factor[1]}")
             else:
                 print(f"{n} is prime")
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
